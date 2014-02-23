@@ -11,6 +11,8 @@
 		93A092EF18BA46DE006129B1 /* Visual_Geometry.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93A092EE18BA46DE006129B1 /* Visual_Geometry.1 */; };
 		93A092F618BA49BA006129B1 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A092F518BA49BA006129B1 /* GLUT.framework */; };
 		93A092F818BA49C3006129B1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A092F718BA49C3006129B1 /* OpenGL.framework */; };
+		93A092FC18BA51B4006129B1 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93A092FB18BA51B4006129B1 /* geometry.cpp */; };
+		93A092FE18BA52BD006129B1 /* visualgeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93A092FD18BA52BD006129B1 /* visualgeometry.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,8 @@
 		93A092F718BA49C3006129B1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		93A092F918BA4B0E006129B1 /* sgl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sgl.hpp; sourceTree = "<group>"; };
 		93A092FA18BA4BF3006129B1 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
+		93A092FB18BA51B4006129B1 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		93A092FD18BA52BD006129B1 /* visualgeometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = visualgeometry.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			children = (
 				93A092EC18BA46DD006129B1 /* main.cpp */,
 				93A092FA18BA4BF3006129B1 /* geometry.h */,
+				93A092FB18BA51B4006129B1 /* geometry.cpp */,
+				93A092FD18BA52BD006129B1 /* visualgeometry.cpp */,
 				93A092F918BA4B0E006129B1 /* sgl.hpp */,
 				93A092EE18BA46DE006129B1 /* Visual_Geometry.1 */,
 			);
@@ -130,6 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93A092ED18BA46DD006129B1 /* main.cpp in Sources */,
+				93A092FC18BA51B4006129B1 /* geometry.cpp in Sources */,
+				93A092FE18BA52BD006129B1 /* visualgeometry.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
