@@ -3,7 +3,8 @@
 #include <cmath>
 #include <iostream>
 
-#include <GL/sgl.hpp>    //  or  #include "sgl.hpp"
+// #include <GL/sgl.hpp>    //  or  #include "sgl.hpp"
+#include "sgl.hpp"
 #include "geometry.h"
 
 using namespace std;

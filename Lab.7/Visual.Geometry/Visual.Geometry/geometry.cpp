@@ -98,7 +98,7 @@ string line_equation(double m, double b)
     }
     else if (m != HUGE_VAL && (m == -1)) {
         if (b > 0)
-            oss << "y = " << "-x" << " + " << c;
+            oss << "y = " << "-x" << " + " << b;
         else if (b < 0)
             oss << "y = " << "-x" << " - " << abs(b);
         else if (b == 0)
@@ -126,11 +126,11 @@ void intersection(double m1, double b1, double m2, double b2,
     /*  Add your code here  */
     
     oss.str(""); // Clear string output
-    oss << std::__1::setprecision(2)
+    oss << std::__1::setprecision(2);
     
     if ((m1 != m2) && (m1 || m2) != HUGE_VAL) {
         i_x = (b2 - b1) / (m1 - m2);
-        i_y = m1 * line_x_int + b1;
+        i_y = m1 * i_x + b1;
         oss << "(" << i_x << "," << i_y << ")";
     }
     if ((m1 == m2) && (m1 || m2) != HUGE_VAL) {
@@ -142,21 +142,21 @@ void intersection(double m1, double b1, double m2, double b2,
     }
     else if ((m1 || m2) == HUGE_VAL){
         if (m1 == HUGE_VAL) {
-            i_x = x1;
-            i_y = m2 * x1 + b2;
+            i_x = b1;
+            i_y = m2 * b1 + b2;
             oss << "(" << i_x << "," << i_y << ")";
         }
-        else (m2 == HUGE_VAL) {
-            i_x = x2;
-            i_y = m1 * x2 + b1;
+        else if (m2 == HUGE_VAL) {
+            i_x = b2;
+            i_y = m1 * b2 + b1;
             oss << "(" << i_x << "," << i_y << ")";
         }
     }
     else {
         oss.str(""); // Clear the output string
         oss << std::__1::setprecision(2);
-        line_x_int = HUGE_VAL;
-        line_y_int = HUGE_VAL;
+        i_x = HUGE_VAL;
+        i_y = HUGE_VAL;
     }
     
 }

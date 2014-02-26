@@ -2478,7 +2478,8 @@ namespace sgl
 #include <cmath>
 #include <cstdlib>  //  Linux requires cstdlib for exit and rand functions
 #include <cstring>
-#include <GL/glut.h>
+// #include <GL/glut.h> (replaced with the following)
+#include <GLUT/GLUT.h>
 
 using std::cout;
 using std::endl;
