@@ -23,7 +23,15 @@ string print_point(double x, double y)
 double distance(double x1, double y1, double x2, double y2)
 {
     /*  Replace with your code */
-    return 0.0;
+    double d;
+    double x, y, x_squared, y_squared;
+    x = x2 - x1;
+    y = y2 - y1;
+    x_squared = pow(x, 2);
+    y_squared = pow(y, 2);
+    d = sqrt (x_squared + y_squared);
+    return d;
+    // return 0.0;
 }
 
 bool equals(double a, double b)
@@ -33,14 +41,35 @@ bool equals(double a, double b)
 
 double slope(double x1, double y1, double x2, double y2)
 {
+    double m;
+    m = (y2 - y1) / (x2 - x1);
+    if (m == HUGE_VAL)
+        return HUGE_VAL;
+    else if (m == -HUGE_VAL)
+        return HUGE_VAL;
+    else
+        return m;
+
     /*  Replace with your code */
-    return 0.0;
+    // return 0.0;
 }
 
 double intercept(double x1, double y1, double x2, double y2)
 {
     /*  Replace with your code */
-    return 0.0;
+    // equation_of_line_y = m * (x - x1) + y1
+    if ( slope(x1, y1, x2, y2) == HUGE_VAL )
+        cout << "The x-";
+    else
+        cout << "The y-";
+    cout << "intercept of the line between ";
+    print_point(x1, y1);
+    cout << " and ";
+    print_point(x2, y2);
+    cout << " is " << intercept(x1, y1, x2, y2)
+    << endl;
+
+    // return 0.0;
 }
 
 string line_equation(double m, double b)
@@ -48,6 +77,16 @@ string line_equation(double m, double b)
 	oss.str("");  //  Clear the output string
     
 	oss << setprecision(2);
+    
+     // Equation of a line y = mx +b for a slope != 1
+     if (m != HUGE_VAL && (m != 1 && m != -1)) {
+     if (c > 0)
+     oss << "y = " << m << "x" << " + " << c << endl;
+     else if (c < 0)
+     oss << "y = " << m << "x" << " - " << abs(c) << endl;
+     else if (c == 0)
+     oss << "y = " << m << "x" << endl;
+    `
     
     /*  Add your code to print the line equation to the
      oss object instead of cout.  (See print_point above
