@@ -9,6 +9,7 @@
 using std::string;
 using std::ostringstream;
 using std::setprecision;
+// using namespace std;
 
 static ostringstream oss;
 
@@ -58,17 +59,16 @@ double intercept(double x1, double y1, double x2, double y2)
 {
     /*  Replace with your code */
     // equation_of_line_y = m * (x - x1) + y1
-    if ( slope(x1, y1, x2, y2) == HUGE_VAL )
-        cout << "The x-";
+    // equation_of_line_y = m * (x - x1) + y1
+    double m;
+    double y_intersect, x_intersect;
+    x_intersect = x1;
+    m = slope(x1, y1, x2, y2);
+    y_intersect = m * ((0 - x1)) + y1;
+    if (slope(x1, y1, x2, y2) != HUGE_VAL)
+        return (y_intersect);
     else
-        cout << "The y-";
-    cout << "intercept of the line between ";
-    print_point(x1, y1);
-    cout << " and ";
-    print_point(x2, y2);
-    cout << " is " << intercept(x1, y1, x2, y2)
-    << endl;
-
+        return (x_intersect);
     // return 0.0;
 }
 
@@ -78,15 +78,34 @@ string line_equation(double m, double b)
     
 	oss << setprecision(2);
     
-     // Equation of a line y = mx +b for a slope != 1
-     if (m != HUGE_VAL && (m != 1 && m != -1)) {
-     if (c > 0)
-     oss << "y = " << m << "x" << " + " << c << endl;
-     else if (c < 0)
-     oss << "y = " << m << "x" << " - " << abs(c) << endl;
-     else if (c == 0)
-     oss << "y = " << m << "x" << endl;
-    `
+    // Equation of a line y = mx +b for a slope != 1
+    if (m != HUGE_VAL && (m != 1 && m != -1)) {
+        if (b > 0)
+            oss << "y = " << m << "x" << " + " << b;
+        else if (b < 0)
+            oss << "y = " << m << "x" << " - " << abs(b);
+        else if (b == 0)
+            oss << "y = " << m << "x";
+    }
+    // Equation of a line for a slope of 1
+    else if (m != HUGE_VAL && (m == 1)) {
+        if (b > 0)
+            oss << "y = " << "x" << " + " << b;
+        else if (b < 0)
+            oss << "y = " << "x" << " - " << abs(b);
+        else if (b == 0)
+            oss << "y = " << "x";
+    }
+    else if (m != HUGE_VAL && (m == -1)) {
+        if (b > 0)
+            oss << "y = " << "-x" << " + " << c;
+        else if (b < 0)
+            oss << "y = " << "-x" << " - " << abs(b);
+        else if (b == 0)
+            oss << "y = " << "-x";
+    }
+    else
+        oss << "x = " << b;
     
     /*  Add your code to print the line equation to the
      oss object instead of cout.  (See print_point above
@@ -105,5 +124,40 @@ void intersection(double m1, double b1, double m2, double b2,
                   double& i_x, double& i_y)
 {
     /*  Add your code here  */
+    
+    oss.str(""); // Clear string output
+    oss << std::__1::setprecision(2)
+    
+    if ((m1 != m2) && (m1 || m2) != HUGE_VAL) {
+        i_x = (b2 - b1) / (m1 - m2);
+        i_y = m1 * line_x_int + b1;
+        oss << "(" << i_x << "," << i_y << ")";
+    }
+    if ((m1 == m2) && (m1 || m2) != HUGE_VAL) {
+        if (b1 == b2) {
+            i_x = HUGE_VAL;
+            i_y = HUGE_VAL;
+            oss << "(" << i_x << "," << i_y << ")";
+        }
+    }
+    else if ((m1 || m2) == HUGE_VAL){
+        if (m1 == HUGE_VAL) {
+            i_x = x1;
+            i_y = m2 * x1 + b2;
+            oss << "(" << i_x << "," << i_y << ")";
+        }
+        else (m2 == HUGE_VAL) {
+            i_x = x2;
+            i_y = m1 * x2 + b1;
+            oss << "(" << i_x << "," << i_y << ")";
+        }
+    }
+    else {
+        oss.str(""); // Clear the output string
+        oss << std::__1::setprecision(2);
+        line_x_int = HUGE_VAL;
+        line_y_int = HUGE_VAL;
+    }
+    
 }
 
