@@ -43,13 +43,17 @@ bool equals(double a, double b)
 double slope(double x1, double y1, double x2, double y2)
 {
     double m;
-    m = (y2 - y1) / (x2 - x1);
-    if (m == HUGE_VAL)
-        return HUGE_VAL;
-    else if (m == -HUGE_VAL)
-        return HUGE_VAL;
+    // m = (y2 - y1) / (x2 - x1);
+    if (x1 == x2)
+        m = HUGE_VAL;
+    // if (m == HUGE_VAL)
+        // return HUGE_VAL;
+    // else if (m == -HUGE_VAL)
+        // HUGE_VAL;
     else
-        return m;
+        m = (y2 - y1) / (x2 - x1);
+    
+    return m;
 
     /*  Replace with your code */
     // return 0.0;
@@ -128,19 +132,7 @@ void intersection(double m1, double b1, double m2, double b2,
     oss.str(""); // Clear string output
     oss << std::__1::setprecision(2);
     
-    if ((m1 != m2) && (m1 || m2) != HUGE_VAL) {
-        i_x = (b2 - b1) / (m1 - m2);
-        i_y = m1 * i_x + b1;
-        oss << "(" << i_x << "," << i_y << ")";
-    }
-    if ((m1 == m2) && (m1 || m2) != HUGE_VAL) {
-        if (b1 == b2) {
-            i_x = HUGE_VAL;
-            i_y = HUGE_VAL;
-            oss << "(" << i_x << "," << i_y << ")";
-        }
-    }
-    else if ((m1 || m2) == HUGE_VAL){
+    if ((m1 || m2) == HUGE_VAL){
         if (m1 == HUGE_VAL) {
             i_x = b1;
             i_y = m2 * b1 + b2;
@@ -151,7 +143,24 @@ void intersection(double m1, double b1, double m2, double b2,
             i_y = m1 * b2 + b1;
             oss << "(" << i_x << "," << i_y << ")";
         }
+        else {
+            i_x = b1;
+            i_y = HUGE_VAL;
+        }
     }
+    if ((m1 != m2) && ((m1 && m2) != HUGE_VAL)) {
+        i_x = (b2 - b1) / (m1 - m2);
+        i_y = m1 * i_x + b1;
+        oss << "(" << i_x << "," << i_y << ")";
+    }
+    else if ((m1 == m2) && ((m1 && m2) != HUGE_VAL)) {
+        if (b1 == b2) {
+            i_x = HUGE_VAL;
+            i_y = HUGE_VAL;
+            oss << "(" << i_x << "," << i_y << ")";
+        }
+    }
+
     else {
         oss.str(""); // Clear the output string
         oss << std::__1::setprecision(2);
