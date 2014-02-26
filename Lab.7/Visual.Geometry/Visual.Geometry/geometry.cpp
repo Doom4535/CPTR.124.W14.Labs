@@ -131,34 +131,47 @@ void intersection(double m1, double b1, double m2, double b2,
     
     oss.str(""); // Clear string output
     oss << std::__1::setprecision(2);
-    
+    // Working with verticle lines
     if ((m1 || m2) == HUGE_VAL){
         if (m1 == HUGE_VAL) {
             i_x = b1;
             i_y = m2 * b1 + b2;
             oss << "(" << i_x << "," << i_y << ")";
         }
-        else if (m2 == HUGE_VAL) {
+        if (m2 == HUGE_VAL) {
             i_x = b2;
             i_y = m1 * b2 + b1;
             oss << "(" << i_x << "," << i_y << ")";
         }
-        else {
+        else {              // Identical verticle lines
             i_x = b1;
             i_y = HUGE_VAL;
         }
     }
-    if ((m1 != m2) && ((m1 && m2) != HUGE_VAL)) {
-        i_x = (b2 - b1) / (m1 - m2);
-        i_y = m1 * i_x + b1;
-        oss << "(" << i_x << "," << i_y << ")";
-    }
-    else if ((m1 == m2) && ((m1 && m2) != HUGE_VAL)) {
-        if (b1 == b2) {
-            i_x = HUGE_VAL;
-            i_y = HUGE_VAL;
+    // Working with non-verticle lines
+    if ((m1 && m2) != HUGE_VAL) {
+        if (m1 != m2) {
+            i_x = (b2 - b1) / (m1 - m2);
+            i_y = m1 * i_x + b1;
             oss << "(" << i_x << "," << i_y << ")";
         }
+    }
+    // Working with identical lines
+    else if (m1 == m2) {
+        if (m1 != HUGE_VAL) {
+            if (b1 == b2) {
+                i_x = HUGE_VAL;
+                i_y = HUGE_VAL;
+                oss << "(" << i_x << "," << i_y << ")";
+            }
+        }
+        /* Removed because it is a duplicate of the last part of 'Working with verticle lines'
+        if (m1 == HUGE_VAL)
+            i_x = b1;
+            i_y = HUGE_VAL;
+            oss << "(" << i_x << "," << i_y << ")";
+         */
+        
     }
 
     else {
