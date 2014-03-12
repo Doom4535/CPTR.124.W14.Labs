@@ -119,8 +119,14 @@ Player look(Location location) {
             break;
         
         default:
+            return NONE;
             break;
     }
+    
+}
+
+void clear_board() {
+    
 }
 
     
