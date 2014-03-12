@@ -1,7 +1,8 @@
 //  File tictactoe.cpp
 
 #include <iostream>
-#include <GL/sgl.hpp>
+// #include <GL/sgl.hpp>
+#include "sgl.hpp"
 #include "ttt_logic.h"
 
 using namespace sgl;

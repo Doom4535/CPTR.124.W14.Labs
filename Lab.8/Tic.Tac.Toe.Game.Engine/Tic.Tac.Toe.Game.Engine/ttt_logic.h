@@ -39,7 +39,7 @@ enum Player
 
 enum Location
 {
-    NORTHWEST,  // left-top corner  (northwest)
+    NORTHWEST,  // left-top   (northwest)
     NORTH,      // center-top       (north)
     NORTHEAST,  // right-top corner (northeast)
     EAST,       // right-center     (east)
