@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930A6D3218D0E4200094B8AD /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930A6D3118D0E4200094B8AD /* OpenGL.framework */; };
 		935A276718D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */; };
 		935A276E18D0A12100240B90 /* ticktacktoe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A276D18D0A12100240B90 /* ticktacktoe.cpp */; };
 		935A278B18D0A81B00240B90 /* ttt_logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A278A18D0A81B00240B90 /* ttt_logic.cpp */; };
@@ -27,12 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		930A6D3118D0E4200094B8AD /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		935A276118D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tic.Tac.Toe.Game.Engine; sourceTree = BUILT_PRODUCTS_DIR; };
 		935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Tic_Tac_Toe_Game_Engine.1; sourceTree = "<group>"; };
 		935A276D18D0A12100240B90 /* ticktacktoe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ticktacktoe.cpp; sourceTree = "<group>"; };
 		935A276F18D0A15200240B90 /* ttt_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ttt_logic.h; sourceTree = "<group>"; };
 		935A278A18D0A81B00240B90 /* ttt_logic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ttt_logic.cpp; sourceTree = "<group>"; };
-		935A278E18D0AA2700240B90 /* glut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glut.h; sourceTree = "<group>"; };
 		935A279018D0AB0C00240B90 /* sgl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sgl.hpp; sourceTree = "<group>"; };
 		935A279118D0C62D00240B90 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930A6D3218D0E4200094B8AD /* OpenGL.framework in Frameworks */,
 				935A279218D0C62D00240B90 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +54,7 @@
 		935A275818D0A06D00240B90 = {
 			isa = PBXGroup;
 			children = (
+				930A6D3118D0E4200094B8AD /* OpenGL.framework */,
 				935A279118D0C62D00240B90 /* GLUT.framework */,
 				935A276318D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */,
 				935A276218D0A06D00240B90 /* Products */,
@@ -72,7 +75,6 @@
 				935A278A18D0A81B00240B90 /* ttt_logic.cpp */,
 				935A276F18D0A15200240B90 /* ttt_logic.h */,
 				935A279018D0AB0C00240B90 /* sgl.hpp */,
-				935A278E18D0AA2700240B90 /* glut.h */,
 				935A276D18D0A12100240B90 /* ticktacktoe.cpp */,
 				935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */,
 			);

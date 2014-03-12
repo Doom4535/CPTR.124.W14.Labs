@@ -74,12 +74,54 @@ bool move(Location location) {
     
     else
         return false;
+
     // else
         // return "Invalid move, this square is already owned"  Is this needed?
-    
+}
 
 Player current_player() {
     // now_playing = NONE;
     return now_playing;
     }
+    
+void set_player(Player new_player) {
+    now_playing = new_player;
+}
+
+Player look(Location location) {
+    switch (location) {
+        case NORTHWEST:
+            return NW_player;
+            break;
+        case NORTH:
+            return N_player;
+            break;
+        case NORTHEAST:
+            return NE_player;
+            break;
+        case WEST:
+            return W_player;
+            break;
+        case CENTER:
+            return C_player;
+            break;
+        case EAST:
+            return E_player;
+            break;
+        case SOUTHWEST:
+            return SW_player;
+            break;
+        case SOUTH:
+            return S_player;
+            break;
+        case SOUTHEAST:
+            return SE_player;
+            break;
+        
+        default:
+            break;
+    }
+}
+
+    
 
