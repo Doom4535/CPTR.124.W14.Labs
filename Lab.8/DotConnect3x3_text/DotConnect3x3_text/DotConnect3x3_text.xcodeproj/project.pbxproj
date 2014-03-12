@@ -7,34 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		935A276518D0A06D00240B90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A276418D0A06D00240B90 /* main.cpp */; };
-		935A276718D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */; };
-		935A276E18D0A12100240B90 /* ticktacktoe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A276D18D0A12100240B90 /* ticktacktoe.cpp */; };
+		935A278818D0A69B00240B90 /* dot3x3_logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A278518D0A69B00240B90 /* dot3x3_logic.cpp */; };
+		935A278918D0A69B00240B90 /* DotConnect3x3_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 935A278718D0A69B00240B90 /* DotConnect3x3_text.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		935A275F18D0A06D00240B90 /* CopyFiles */ = {
+		935A277718D0A5A700240B90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				935A276718D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		935A276118D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tic.Tac.Toe.Game.Engine; sourceTree = BUILT_PRODUCTS_DIR; };
-		935A276418D0A06D00240B90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Tic_Tac_Toe_Game_Engine.1; sourceTree = "<group>"; };
-		935A276D18D0A12100240B90 /* ticktacktoe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ticktacktoe.cpp; sourceTree = "<group>"; };
-		935A276F18D0A15200240B90 /* ttt_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ttt_logic.h; sourceTree = "<group>"; };
+		935A277918D0A5A700240B90 /* DotConnect3x3_text */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DotConnect3x3_text; sourceTree = BUILT_PRODUCTS_DIR; };
+		935A278518D0A69B00240B90 /* dot3x3_logic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dot3x3_logic.cpp; sourceTree = "<group>"; };
+		935A278618D0A69B00240B90 /* dot3x3_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dot3x3_logic.h; sourceTree = "<group>"; };
+		935A278718D0A69B00240B90 /* DotConnect3x3_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DotConnect3x3_text.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		935A275E18D0A06D00240B90 /* Frameworks */ = {
+		935A277618D0A5A700240B90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,93 +41,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		935A275818D0A06D00240B90 = {
+		935A277018D0A5A700240B90 = {
 			isa = PBXGroup;
 			children = (
-				935A276318D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */,
-				935A276218D0A06D00240B90 /* Products */,
+				935A277B18D0A5A700240B90 /* DotConnect3x3_text */,
+				935A277A18D0A5A700240B90 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		935A276218D0A06D00240B90 /* Products */ = {
+		935A277A18D0A5A700240B90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				935A276118D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */,
+				935A277918D0A5A700240B90 /* DotConnect3x3_text */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		935A276318D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */ = {
+		935A277B18D0A5A700240B90 /* DotConnect3x3_text */ = {
 			isa = PBXGroup;
 			children = (
-				935A276418D0A06D00240B90 /* main.cpp */,
-				935A276F18D0A15200240B90 /* ttt_logic.h */,
-				935A276D18D0A12100240B90 /* ticktacktoe.cpp */,
-				935A276618D0A06D00240B90 /* Tic_Tac_Toe_Game_Engine.1 */,
+				935A278518D0A69B00240B90 /* dot3x3_logic.cpp */,
+				935A278618D0A69B00240B90 /* dot3x3_logic.h */,
+				935A278718D0A69B00240B90 /* DotConnect3x3_text.cpp */,
 			);
-			path = Tic.Tac.Toe.Game.Engine;
+			path = DotConnect3x3_text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		935A276018D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */ = {
+		935A277818D0A5A700240B90 /* DotConnect3x3_text */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 935A276A18D0A06D00240B90 /* Build configuration list for PBXNativeTarget "Tic.Tac.Toe.Game.Engine" */;
+			buildConfigurationList = 935A278218D0A5A800240B90 /* Build configuration list for PBXNativeTarget "DotConnect3x3_text" */;
 			buildPhases = (
-				935A275D18D0A06D00240B90 /* Sources */,
-				935A275E18D0A06D00240B90 /* Frameworks */,
-				935A275F18D0A06D00240B90 /* CopyFiles */,
+				935A277518D0A5A700240B90 /* Sources */,
+				935A277618D0A5A700240B90 /* Frameworks */,
+				935A277718D0A5A700240B90 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Tic.Tac.Toe.Game.Engine;
-			productName = Tic.Tac.Toe.Game.Engine;
-			productReference = 935A276118D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */;
+			name = DotConnect3x3_text;
+			productName = DotConnect3x3_text;
+			productReference = 935A277918D0A5A700240B90 /* DotConnect3x3_text */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		935A275918D0A06D00240B90 /* Project object */ = {
+		935A277118D0A5A700240B90 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Aaron Covrig";
 			};
-			buildConfigurationList = 935A275C18D0A06D00240B90 /* Build configuration list for PBXProject "Tic.Tac.Toe.Game.Engine" */;
+			buildConfigurationList = 935A277418D0A5A700240B90 /* Build configuration list for PBXProject "DotConnect3x3_text" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 935A275818D0A06D00240B90;
-			productRefGroup = 935A276218D0A06D00240B90 /* Products */;
+			mainGroup = 935A277018D0A5A700240B90;
+			productRefGroup = 935A277A18D0A5A700240B90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				935A276018D0A06D00240B90 /* Tic.Tac.Toe.Game.Engine */,
+				935A277818D0A5A700240B90 /* DotConnect3x3_text */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		935A275D18D0A06D00240B90 /* Sources */ = {
+		935A277518D0A5A700240B90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935A276E18D0A12100240B90 /* ticktacktoe.cpp in Sources */,
-				935A276518D0A06D00240B90 /* main.cpp in Sources */,
+				935A278818D0A69B00240B90 /* dot3x3_logic.cpp in Sources */,
+				935A278918D0A69B00240B90 /* DotConnect3x3_text.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		935A276818D0A06D00240B90 /* Debug */ = {
+		935A278018D0A5A800240B90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -167,7 +163,7 @@
 			};
 			name = Debug;
 		};
-		935A276918D0A06D00240B90 /* Release */ = {
+		935A278118D0A5A800240B90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,14 +194,14 @@
 			};
 			name = Release;
 		};
-		935A276B18D0A06D00240B90 /* Debug */ = {
+		935A278318D0A5A800240B90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		935A276C18D0A06D00240B90 /* Release */ = {
+		935A278418D0A5A800240B90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -215,24 +211,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		935A275C18D0A06D00240B90 /* Build configuration list for PBXProject "Tic.Tac.Toe.Game.Engine" */ = {
+		935A277418D0A5A700240B90 /* Build configuration list for PBXProject "DotConnect3x3_text" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				935A276818D0A06D00240B90 /* Debug */,
-				935A276918D0A06D00240B90 /* Release */,
+				935A278018D0A5A800240B90 /* Debug */,
+				935A278118D0A5A800240B90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		935A276A18D0A06D00240B90 /* Build configuration list for PBXNativeTarget "Tic.Tac.Toe.Game.Engine" */ = {
+		935A278218D0A5A800240B90 /* Build configuration list for PBXNativeTarget "DotConnect3x3_text" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				935A276B18D0A06D00240B90 /* Debug */,
-				935A276C18D0A06D00240B90 /* Release */,
+				935A278318D0A5A800240B90 /* Debug */,
+				935A278418D0A5A800240B90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 935A275918D0A06D00240B90 /* Project object */;
+	rootObject = 935A277118D0A5A700240B90 /* Project object */;
 }
