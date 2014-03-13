@@ -7,12 +7,11 @@
 
 #include <iostream>
 #include "ttt_logic.h"
-#include "ticktacktoe.cpp"
 using namespace std;
 
 enum Status Playing, Win_NW_NE, Win_W_E, Win_SW_SE, Win_NW_SW, Win_N_S, Win_NE_SE, Win_NW_SE, Win_NE_SW, Draw;
 
-static Player NW_player, N_player, NE_player, W_player, C_player, E_player, SW_player, S_player, SE_player;
+static Player NW_player, N_player = NONE, NE_player, W_player, C_player, E_player, SW_player, S_player, SE_player;
 
 Player now_playing = NONE;
 
@@ -126,7 +125,8 @@ Player look(Location location) {
 }
 
 void clear_board() {
-    
+    set_player(CROSS);
+    NW_player = N_player = NE_player = W_player = C_player = E_player = SW_player = S_player = SE_player = NONE;
 }
 
     
