@@ -31,54 +31,71 @@ Status check_status() {
 }
 
 
+void cycle_player(Player now_playing) {
+    if (now_playing == CROSS)
+        ::now_playing = NOUGHT;
+    else if (now_playing == NOUGHT)
+        ::now_playing = CROSS;
+}
+
 bool move(Location location) {
     if (location == NORTHWEST && NW_player == NONE) {
         NW_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == NORTH && N_player == NONE) {
         N_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == NORTHEAST && NE_player == NONE) {
         NE_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == WEST && W_player == NONE) {
         W_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == CENTER && C_player == NONE) {
         C_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == EAST && E_player == NONE) {
         E_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == SOUTHWEST && SW_player == NONE) {
         SW_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == SOUTH && S_player == NONE) {
         S_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     if (location == SOUTHEAST && SE_player == NONE) {
         SE_player = current_player();
+        cycle_player(current_player());
         return true;
     }
     
     else
         return false;
+    
     // void set_player(Player new_player);
 
     // else
@@ -88,11 +105,12 @@ bool move(Location location) {
 Player current_player() {
     // now_playing = NONE;
     return now_playing;
-    }
+}
     
 void set_player(Player new_player) {
     now_playing = new_player;
 }
+
 
 Player look(Location location) {
     switch (location) {
