@@ -25,7 +25,7 @@ Player last_play;
 
 Status game_over = PLAYING; //set status to playing (inprogress)
 
-int round = 0;
+int rnd = 0;
 
 Location sq;
 
@@ -57,8 +57,7 @@ Status check_status() {
         game_over = WIN_NW_SE;
     else if (NE_player == last_play&& C_player == last_play && SW_player == last_play)
         game_over = WIN_NE_SW;
-    round++;
-    if (round == 9 && game_over == PLAYING)
+    if (rnd == 9 && game_over == PLAYING)
         game_over = DRAW;
     return game_over;
     
@@ -69,6 +68,7 @@ bool move(Location location) {
         NW_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -76,6 +76,7 @@ bool move(Location location) {
         N_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -83,6 +84,7 @@ bool move(Location location) {
         NE_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -90,6 +92,7 @@ bool move(Location location) {
         W_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -97,6 +100,7 @@ bool move(Location location) {
         C_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -104,6 +108,7 @@ bool move(Location location) {
         E_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -111,6 +116,7 @@ bool move(Location location) {
         SW_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -118,6 +124,7 @@ bool move(Location location) {
         S_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -125,6 +132,7 @@ bool move(Location location) {
         SE_player = current_player();
         last_play = current_player();
         cycle_player(current_player());
+        rnd++;
         return true;
     }
     
@@ -188,7 +196,7 @@ Player look(Location location) {
 void clear_board() {
     
     NW_player = N_player = NE_player = W_player = C_player = E_player = SW_player = S_player = SE_player = NONE;
-    round = 0;
+    rnd = 0;
     last_play = NOUGHT;
     set_player(CROSS);
     game_over = PLAYING;
