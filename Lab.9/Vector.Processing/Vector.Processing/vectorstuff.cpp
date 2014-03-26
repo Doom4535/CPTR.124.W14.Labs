@@ -21,7 +21,7 @@ int maximum(const vector<int>& v) {
     }
     */
     int m_value = 0;
-    for (int i = 0; i <= v.size(); i++) {
+    for (int i = 0; i < v.size(); i++) {
         if (v[i] > m_value) {
             m_value = v[i];
         }
@@ -30,14 +30,13 @@ int maximum(const vector<int>& v) {
 }
 
 int find(const vector<int>& v, int seek) {
-    for (int i = 0; i <= v.size(); i++) {
+    int result = -1;
+    for (int i = 0; i < v.size(); i++) {
         if (seek == v[i]) {
-            return i;
+            result = i;
         }
-    
-    else
-        return -1;
     }
+    return result;
 }
 
 int count(const vector<int>& v, int seek) {
@@ -50,13 +49,13 @@ int count(const vector<int>& v, int seek) {
 
 bool equivalent(const vector<int>& v1, const vector<int>& v2) {
     bool result = true;
-    if (v1.size() == v2.size()) {
+    if (v1.size() == v2.size()) {  // determining if the two vectors are the same size, if not they cannot be equivalent
         // int n =0;
         int i = 0;
         // for (int i = 0 ; i <= v2.size() ; i++) replaced with while
-        while (i <= v2.size()) {
-            if (find(v2, v1[i]) != -1) {
-                if (count(v2, v1[i]) == ::count(v1, v1[i]))
+        while (i < v2.size()) {
+            if (find(v2, v1[i]) != -1) {  // determining if the two vectors have the same numbers, if not they cannot be equivalent
+                if (count(v2, v1[i]) == ::count(v1, v1[i]))  // determining if the two vectors have the same number of each element
                     i++;
                 else {
                     break;
@@ -73,6 +72,26 @@ bool equivalent(const vector<int>& v1, const vector<int>& v2) {
 }
 
 bool prefix(const vector<int>& v1, const vector<int>& v2) {
+    bool result = true;
+    for (int i = 0 ; i < v1.size() ; i++) {
+        if (v1[i] == v2[i]) {
+            i++;
+        }
+        else
+            result = false;
+    }
+    return result;
+}
+
+void sort(vector<int>& v) {
+    // Should probably use a different method
+    /*
+    int m = 0 , size =0 , s = 0;
+    m = maximum(v);
+    size = v.size();
+    s = find(v , m);
+    v[size - 1] = m;
+    */
     
 }
 
