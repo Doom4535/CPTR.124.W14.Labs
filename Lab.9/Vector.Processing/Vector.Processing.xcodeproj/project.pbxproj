@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93AAD98518E3410500980AB3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93AAD98418E3410500980AB3 /* main.cpp */; };
 		93AAD98718E3410900980AB3 /* Vector_Processing.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93AAD98618E3410900980AB3 /* Vector_Processing.1 */; };
 		93AAD98F18E342B200980AB3 /* vectorstuff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93AAD98E18E342B200980AB3 /* vectorstuff.cpp */; };
+		93ED7DEB18EB5A3F0019C9E6 /* simplevectortestfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93ED7DEA18EB5A3F0019C9E6 /* simplevectortestfile.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 
 /* Begin PBXFileReference section */
 		93AAD98118E3410100980AB3 /* Vector.Processing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Vector.Processing; sourceTree = BUILT_PRODUCTS_DIR; };
-		93AAD98418E3410500980AB3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		93AAD98618E3410900980AB3 /* Vector_Processing.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Vector_Processing.1; sourceTree = "<group>"; };
 		93AAD98D18E3426200980AB3 /* vectorstuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vectorstuff.h; sourceTree = "<group>"; };
 		93AAD98E18E342B200980AB3 /* vectorstuff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vectorstuff.cpp; sourceTree = "<group>"; };
+		93ED7DEA18EB5A3F0019C9E6 /* simplevectortestfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplevectortestfile.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 		93AAD98318E3410100980AB3 /* Vector.Processing */ = {
 			isa = PBXGroup;
 			children = (
-				93AAD98418E3410500980AB3 /* main.cpp */,
 				93AAD98E18E342B200980AB3 /* vectorstuff.cpp */,
+				93ED7DEA18EB5A3F0019C9E6 /* simplevectortestfile.cpp */,
 				93AAD98D18E3426200980AB3 /* vectorstuff.h */,
 				93AAD98618E3410900980AB3 /* Vector_Processing.1 */,
 			);
@@ -122,7 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93AAD98518E3410500980AB3 /* main.cpp in Sources */,
+				93ED7DEB18EB5A3F0019C9E6 /* simplevectortestfile.cpp in Sources */,
 				93AAD98F18E342B200980AB3 /* vectorstuff.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +233,7 @@
 				93AAD98C18E3411A00980AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

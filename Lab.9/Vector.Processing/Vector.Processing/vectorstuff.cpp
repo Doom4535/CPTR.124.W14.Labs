@@ -20,7 +20,7 @@ int maximum(const vector<int>& v) {
         max(v[i] , v[i+1]);
     }
     */
-    int m_value = 0;
+    int m_value = 1;
     for (int i = 0; i < v.size(); i++) {
         if (v[i] > m_value) {
             m_value = v[i];
@@ -93,7 +93,54 @@ void sort(vector<int>& v) {
     v[size - 1] = m;
     */
     
+    int n = v.size();
+    for (int i = 0; i < n - 1; i++) {
+        int smallest = i;
+        for (int j = i + 1; j < n; j++) {
+            if (v[j] < v[smallest]) {
+                smallest = j;
+            }
+        }
+        int temp = v[i];
+        v[i] = v[smallest];
+        v[smallest] = temp;
+    }
 }
+
+bool is_ascending(const vector<int>& v){
+    // incomplete
+    return -1;
+}
+
+
+
+bool remove_first(vector<int>& v, int del) {
+    // incomplete
+    return -1;
+}
+
+
+int remove_all(vector<int>& v, int del) {
+    // incomplete
+    return -1;
+}
+
+
+
+void rotate(vector<int>& v, int n) {
+    // incomplete
+}
+
+
+bool subsequence(const vector<int>& seq1, const vector<int>& seq2) {
+    // incomplete
+    return -1;
+}
+
+
+
+
+
 
 
 
