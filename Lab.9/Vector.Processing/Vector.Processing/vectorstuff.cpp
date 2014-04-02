@@ -163,7 +163,6 @@ int remove_all(vector<int>& v, int del) {
 
 
 void rotate(vector<int>& v, int n) {
-    // incomplete (needs to be able to rotate forward and backwards
     int m = abs(n);
     if (n > 0) {
         for (int i = 0; i < n; i++) {
@@ -197,8 +196,23 @@ void rotate(vector<int>& v, int n) {
 
 
 bool subsequence(const vector<int>& seq1, const vector<int>& seq2) {
-    // incomplete
-    return -1;
+    // incomplete (currently breaks if the sequence occurs after a duplicate number in the sequence
+    int v = -1;
+    int z = -1; // used to keep count of current match
+    int h = -1; // used to keep count of previous location of a match in seq1
+    bool result;
+    bool test;
+    for (int i = 0; i < seq2.size(); i++) {
+        z = find(seq1, seq2[i]);
+        if (h < z) {
+            test = true;
+            h = z;
+        }
+        else
+            test = false;
+        cout << z << " : " << test << endl;
+    }
+    return test;
 }
 
 

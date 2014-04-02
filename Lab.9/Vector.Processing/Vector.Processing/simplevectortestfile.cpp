@@ -42,6 +42,8 @@ int main() {
     bool b;
     
     int num = -5;
+    vector<int> list1 { 3, 5, 7, 8, 9, 0, 1, -5, 6, 7, 8, 26 };
+    vector<int> list2 { 3, 7, 0, 1, 8 };
     
     i = maximum(list);
     cout << "Maximum: " << i << endl;
@@ -66,5 +68,7 @@ int main() {
          << "The vector after the removal of all occurances of " << num << " is: " << list << endl;
     rotate(list, -2);
     cout << "The vector after rotation is: " << list << endl;
-    b = subsequence(list, list);
+    b = subsequence(list1, list2);
+    cout << "Is " << list2 << " a subsequence of " << list1 << endl;
+    cout << b << endl;
 }
