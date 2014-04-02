@@ -13,6 +13,20 @@
 using namespace std;
 using std::vector;
 
+// Modifying cout to print vectors
+static ostream& operator<<(ostream& os, const vector<int>& v) {
+    os << '{';
+    int n = v.size();
+    if (n > 0) {
+        os << v[0];
+        for (int i = 1; i < n; i++)
+            os << ',' << v[i];
+    }
+    os << '}';
+    return os;
+}
+
+
 int maximum(const vector<int>& v) {
     
     /*  Old code (replacing with built in function
@@ -29,11 +43,12 @@ int maximum(const vector<int>& v) {
     return m_value;
 }
 
-int find(const vector<int>& v, int seek) {
+int find(const vector<int>& v, int seek) { //finds first occurance of a number (seek)
     int result = -1;
     for (int i = 0; i < v.size(); i++) {
         if (seek == v[i]) {
             result = i;
+            break;
         }
     }
     return result;
@@ -108,27 +123,76 @@ void sort(vector<int>& v) {
 }
 
 bool is_ascending(const vector<int>& v){
-    // incomplete
-    return -1;
+    bool ascending = true;
+    for ( int i = 0 ; i < v.size() - 1 ; i++ )
+        if (v[i] > v[i + 1]) {
+            ascending = false;
+        }
+    return ascending;
 }
 
 
 
 bool remove_first(vector<int>& v, int del) {
-    // incomplete
-    return -1;
+    bool removal = false;
+    
+        int location = -1;
+        location = find(v, del);
+        for (int i = location; i < (v.size() - 1); i++) {
+            v[i] = v[i + 1];
+        }
+        v.pop_back();
+        removal = true;
+    
+    return removal;
 }
 
 
 int remove_all(vector<int>& v, int del) {
-    // incomplete
-    return -1;
+    int i = 0; // calls remove_first however many times count detects the number (del) to be removed.
+    int repeat = count(v, del);
+    while (i < repeat) {
+        if (find(v, del) != -1) {
+        remove_first(v, del);
+        i++;
+        }
+    }
+    return i;
 }
 
 
 
 void rotate(vector<int>& v, int n) {
-    // incomplete
+    // incomplete (needs to be able to rotate forward and backwards
+    int m = abs(n);
+    if (n > 0) {
+        for (int i = 0; i < n; i++) {
+        v.push_back(v[0]);
+        remove_first(v, v[0]);
+        }
+    }
+    else if (n < 0) {
+        int size = v.size();
+        for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
+            int last;
+            last = v[size - (g + 1)];
+            v[v.size() - (g + 1)] = v[0 + g];
+            v[0 + g] = last;
+            
+        }
+        for (int i = 0; i < m; i++) {
+            v.push_back(v[0]);
+            remove_first(v, v[0]);
+        }
+            for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
+                int last;
+                last = v[size - (g + 1)];
+                v[v.size() - (g + 1)] = v[0 + g];
+                v[0 + g] = last;
+                
+            }
+
+    }
 }
 
 

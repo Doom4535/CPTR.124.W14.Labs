@@ -20,7 +20,7 @@ using namespace std;
 //  functions.
 
 // Modifying cout to print vectors
-ostream& operator<<(ostream& os, const vector<int>& v) {
+static ostream& operator<<(ostream& os, const vector<int>& v) {
     os << '{';
     int n = v.size();
     if (n > 0) {
@@ -34,28 +34,37 @@ ostream& operator<<(ostream& os, const vector<int>& v) {
 
 int main() {
     //  Make a small vector of integers
-    vector<int> list { 1, 5, 3, 10 };
+    vector<int> list { 1, 5, 3, 10, 15, 12, 5, 33, 5, 66, 34, 1, 5, 5, 3, -1, -5, 7 , -5, 6, -5, 100};
     
     //  Some variables to ensure the function return types
     //  are properly assignable.
     int i;
     bool b;
     
+    int num = -5;
+    
     i = maximum(list);
     cout << "Maximum: " << i << endl;
-    int num = 10;
     i = find(list, num);
     cout << "Location of first occurance of " << num << " is: " << i << endl;
     i = count(list, num);
     cout << "Number of occurances of " << num << " is: " << i << endl;
     b = equivalent(list, list);
     b = prefix(list, list);
+    cout << "Is the vector in ascending order? " << is_ascending(list) << endl;
     cout << "Order of vector before sorting: " << list << endl;
     sort(list);
     cout << "Order of vector after sorting: " << list << endl;
     b = is_ascending(list);
+    cout << "Is the vector in ascending order? " << b << endl;
+    cout << "The vector before removal of a component is: " << list << endl;
     b = remove_first(list, num);
+    cout << "Was a number removed from the vector? " << b << endl
+         << " The vector after removal of the first occurance of " << num << " is: " << list << endl;
     i = remove_all(list, num);
-    rotate(list, 2);
+    cout << "The number of times " << num << " was removed: " << i << endl
+         << "The vector after the removal of all occurances of " << num << " is: " << list << endl;
+    rotate(list, -2);
+    cout << "The vector after rotation is: " << list << endl;
     b = subsequence(list, list);
 }
