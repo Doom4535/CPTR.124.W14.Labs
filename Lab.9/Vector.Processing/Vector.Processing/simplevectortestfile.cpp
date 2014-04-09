@@ -34,7 +34,7 @@ static ostream& operator<<(ostream& os, const vector<int>& v) {
 
 int main() {
     //  Make a small vector of integers
-    vector<int> list { -1, 5, 7, 26};
+    vector<int> list { -1, 5, 7, 26, 37, 51};
     
     //  Some variables to ensure the function return types
     //  are properly assignable.
@@ -70,6 +70,8 @@ int main() {
          << "The vector after the removal of all occurances of " << num << " is: " << list << endl;
     rotate(list, 2);
     cout << "The vector after rotation is: " << list << endl;
+    rotate(list, -2);
+    cout << "The vector after rotation with a negative is: " << list << endl;
     b = subsequence(list1, list2);
     cout << "Is " << list2 << " a subsequence of " << list1 << endl;
     cout << b << endl;

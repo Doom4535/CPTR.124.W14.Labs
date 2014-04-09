@@ -5,6 +5,7 @@
 //  Created by Aaron Covrig on 3/26/14.
 //  Copyright (c) 2014 Aaron Covrig. All rights reserved.
 //
+//  Second submission
 #include <iostream>
 #include <cmath>
 #include <vector>
