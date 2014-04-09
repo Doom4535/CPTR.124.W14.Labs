@@ -36,7 +36,7 @@ int maximum(const vector<int>& v) {
     }
     */
     
-    int m_value = 0;
+    int m_value = v[0];
     for (int i = 0; i < v.size(); i++) {
         if (v[i] > m_value) {
             m_value = v[i];
@@ -188,13 +188,13 @@ int remove_all(vector<int>& v, int del) {
 void rotate(vector<int>& v, int n) {
     if (v.size() != 0) {
         int m = abs(n);
-        if (n > 0) {
+        if (n < 0) {
             for (int i = 0; i < n; i++) {
                 v.push_back(v[0]);
                 remove_first(v, v[0]);
             }
         }
-        else if (n < 0) {
+        else if (n > 0) {
             int size = v.size();
             for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
                 int last;
@@ -207,13 +207,13 @@ void rotate(vector<int>& v, int n) {
                 v.push_back(v[0]);
                 remove_first(v, v[0]);
             }
-                for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
-                    int last;
-                    last = v[size - (g + 1)];
-                    v[v.size() - (g + 1)] = v[0 + g];
-                    v[0 + g] = last;
+            // for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
+                    // int last;
+                    // last = v[size - (g + 1)];
+                    // v[v.size() - (g + 1)] = v[0 + g];
+                    // v[0 + g] = last;
                 
-                }
+            // }
         }
     
     }
