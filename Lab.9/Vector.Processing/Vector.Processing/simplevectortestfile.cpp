@@ -34,7 +34,7 @@ static ostream& operator<<(ostream& os, const vector<int>& v) {
 
 int main() {
     //  Make a small vector of integers
-    vector<int> list { 1, 5, 3, 10, 15, 12, 5, 33, 5, 66, 34, 1, 5, 5, 3, -1, -5, 7 , -5, 6, -5, 100};
+    vector<int> list { -1, 5, 7, 26};
     
     //  Some variables to ensure the function return types
     //  are properly assignable.
@@ -42,8 +42,8 @@ int main() {
     bool b;
     
     int num = -5;
-    vector<int> list1 { 3, 5, 7, 8, 9, 0, 1, -5, 6, 7, 8, 26 };
-    vector<int> list2 { 3, 7, 0, 1, 8 };
+    vector<int> list1 { 5, 7, -9, 15 , 17 };
+    vector<int> list2 { 5, 7, 8 };
     
     i = maximum(list);
     cout << "Maximum: " << i << endl;
@@ -51,9 +51,11 @@ int main() {
     cout << "Location of first occurance of " << num << " is: " << i << endl;
     i = count(list, num);
     cout << "Number of occurances of " << num << " is: " << i << endl;
-    b = equivalent(list, list);
-    b = prefix(list, list);
-    cout << "Is the vector in ascending order? " << is_ascending(list) << endl;
+    b = equivalent(list1, list2);
+    cout << "Are " << list1 << " and " << list2 << " equivalent? " << b << endl;
+    b = prefix(list1, list2);
+    cout << "Is list list 2 " << list2 << " a prefix of " << list1 << " ? " << b << endl;
+    cout << "Is the vector " << list << " in ascending order? " << is_ascending(list) << endl;
     cout << "Order of vector before sorting: " << list << endl;
     sort(list);
     cout << "Order of vector after sorting: " << list << endl;
@@ -66,7 +68,7 @@ int main() {
     i = remove_all(list, num);
     cout << "The number of times " << num << " was removed: " << i << endl
          << "The vector after the removal of all occurances of " << num << " is: " << list << endl;
-    rotate(list, -2);
+    rotate(list, 2);
     cout << "The vector after rotation is: " << list << endl;
     b = subsequence(list1, list2);
     cout << "Is " << list2 << " a subsequence of " << list1 << endl;
