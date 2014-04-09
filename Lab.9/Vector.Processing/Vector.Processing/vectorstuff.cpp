@@ -195,6 +195,36 @@ void rotate(vector<int>& v, int n) {
 }
 
 
+// bool subsequence(const vector<int>& seq1, const vector<int>& seq2) {
+    //   incomplete (currently breaks if the sequence occurs after a duplicate number in the sequence
+    // int z = -1; // used to keep count of current match
+    // int h = -1; // used to keep count of previous location of a match in seq1
+    // bool test;
+    // for (int i = 0; i < seq2.size(); i++) {
+        // z = find(seq1, seq2[i]);
+        // if (h < z) {
+            // test = true;
+            // h = z;
+        // }
+        // else
+            // test = false;
+        // cout << z << " : " << test << endl;
+    // }
+    // return test;
+// }
+
+int find_modified(const vector<int>& v, int seek, int round, int last) { //finds first occurance of a number (seek) and round is the number of times that it has been called, and last is used to remember the position of the previous match
+    int result = -1;
+    int occurances = count(v, seek);
+    for (int i = ( 0 + last); i < v.size(); i++) {
+        if (seek == v[i]) {
+            result = i;
+            break;
+        }
+    }
+    return result;
+}
+
 bool subsequence(const vector<int>& seq1, const vector<int>& seq2) {
     // incomplete (currently breaks if the sequence occurs after a duplicate number in the sequence
     int v = -1;
@@ -202,18 +232,29 @@ bool subsequence(const vector<int>& seq1, const vector<int>& seq2) {
     int h = -1; // used to keep count of previous location of a match in seq1
     bool result;
     bool test;
+    int last = 0; // used to move i up for each failure
+    int round = 0; // used to keep track of the number of fails
+    cout << "List 2 " << seq2 << " List 1 " << seq1 << endl;
     for (int i = 0; i < seq2.size(); i++) {
-        z = find(seq1, seq2[i]);
+        z = find_modified(seq1, seq2[i], round, last);
+        last = i;
         if (h < z) {
             test = true;
             h = z;
+            last = h;
         }
-        else
+        else {
             test = false;
-        cout << z << " : " << test << endl;
+            round++;
+            last++;
+        }
+        // cout << z << " : " << test << endl; // used to view progress through loop
     }
     return test;
 }
+
+
+        
 
 
 

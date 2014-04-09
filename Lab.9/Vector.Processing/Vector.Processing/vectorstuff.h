@@ -155,4 +155,6 @@ void rotate(vector<int>& v, int n);
 //  method.
 bool subsequence(const vector<int>& seq1, const vector<int>& seq2);
 
+// bool subsequence_2(const vector<int>& seq1, const vector<int>& seq2); // used to test modified code
+
 #endif
