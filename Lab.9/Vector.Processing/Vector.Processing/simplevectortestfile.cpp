@@ -34,7 +34,7 @@ static ostream& operator<<(ostream& os, const vector<int>& v) {
 
 int main() {
     //  Make a small vector of integers
-    vector<int> list { 1, 2, 3};
+    vector<int> list { 1, 2, 3, 4, 5, 6 };
     
     //  Some variables to ensure the function return types
     //  are properly assignable.
@@ -42,8 +42,8 @@ int main() {
     bool b;
     
     int num = -5;
-    vector<int> list1 { 5, 7, -9, 15 , 17 };
-    vector<int> list2 { 5, 7, 8 };
+    vector<int> list1 { 76, -7, 8, 9, 7, -7, 27, 8, 9, 15, 27, 0, 1 };
+    vector<int> list2 { 7, 7, -7, 8, 9, 15, 27, 1};
     
     i = maximum(list);
     cout << "Maximum: " << i << endl;
@@ -68,9 +68,9 @@ int main() {
     i = remove_all(list, num);
     cout << "The number of times " << num << " was removed: " << i << endl
          << "The vector after the removal of all occurances of " << num << " is: " << list << endl;
-    rotate(list, 1);
+    rotate(list, 2);
     cout << "The vector after rotation is: " << list << endl;
-    rotate(list, -1);
+    rotate(list, -2);
     cout << "The vector after rotation with a negative is: " << list << endl;
     b = subsequence(list1, list2);
     cout << "Is " << list2 << " a subsequence of " << list1 << endl;

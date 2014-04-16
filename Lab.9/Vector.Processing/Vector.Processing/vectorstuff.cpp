@@ -5,7 +5,7 @@
 //  Created by Aaron Covrig on 3/26/14.
 //  Copyright (c) 2014 Aaron Covrig. All rights reserved.
 //
-//  Second submission
+//  Third submission
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -35,15 +35,20 @@ int maximum(const vector<int>& v) {
         max(v[i] , v[i+1]);
     }
     */
-    
-    int m_value = v[0];
-    for (int i = 0; i < v.size(); i++) {
-        if (v[i] > m_value) {
-            m_value = v[i];
+    if (v.size() != 0){
+        int m_value = v[0];
+        for (int i = 0; i < v.size(); i++) {
+            if (v[i] > m_value) {
+                m_value = v[i];
+            }
         }
+        return m_value;
     }
-    return m_value;
+    else
+        return -1;
 }
+
+
 
 int find(const vector<int>& v, int seek) { //finds first occurance of a number (seek)
     int result = -1;
@@ -186,38 +191,38 @@ int remove_all(vector<int>& v, int del) {
 
 
 void rotate(vector<int>& v, int n) {
+    n = n * -1; // Changing n value to correct rotation direction
     if (v.size() != 0) {
         int m = abs(n);
-        if (n < 0) {
+        if (n > 0) {
             for (int i = 0; i < n; i++) {
                 v.push_back(v[0]);
                 remove_first(v, v[0]);
             }
         }
-        else if (n > 0) {
+        else if (n < 0) {
             int size = v.size();
             for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
                 int last;
                 last = v[size - (g + 1)];
                 v[v.size() - (g + 1)] = v[0 + g];
                 v[0 + g] = last;
-            
+                
             }
             for (int i = 0; i < m; i++) {
                 v.push_back(v[0]);
                 remove_first(v, v[0]);
             }
-            // for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
-                    // int last;
-                    // last = v[size - (g + 1)];
-                    // v[v.size() - (g + 1)] = v[0 + g];
-                    // v[0 + g] = last;
+            for (int g = 0; (size - g) > (v.size() / 2) ; g++) {
+                int last;
+                last = v[size - (g + 1)];
+                v[v.size() - (g + 1)] = v[0 + g];
+                v[0 + g] = last;
                 
-            // }
+            }
         }
-    
-    }
         
+    }
 }
 
 
