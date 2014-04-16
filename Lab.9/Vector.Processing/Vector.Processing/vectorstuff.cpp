@@ -35,18 +35,16 @@ int maximum(const vector<int>& v) {
         max(v[i] , v[i+1]);
     }
     */
-    if (v.size() != 0){
-        int m_value = v[0];
-        for (int i = 0; i < v.size(); i++) {
-            if (v[i] > m_value) {
-                m_value = v[i];
-            }
+
+    int m_value = v[0];
+    for (int i = 0; i < v.size(); i++) {
+        if (v[i] > m_value) {
+            m_value = v[i];
         }
-        return m_value;
     }
-    else
-        return -1;
+    return m_value;
 }
+
 
 
 
