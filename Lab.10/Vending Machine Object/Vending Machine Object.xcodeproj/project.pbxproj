@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93E70D8118FEFF2D00D8734D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E70D8018FEFF2D00D8734D /* main.cpp */; };
 		93E70D8318FEFF2D00D8734D /* Vending_Machine_Object.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */; };
+		93E70D8B18FF033300D8734D /* vend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E70D8A18FF033300D8734D /* vend.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,9 @@
 
 /* Begin PBXFileReference section */
 		93E70D7D18FEFF2D00D8734D /* Vending Machine Object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vending Machine Object"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93E70D8018FEFF2D00D8734D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Vending_Machine_Object.1; sourceTree = "<group>"; };
+		93E70D8918FF02A500D8734D /* vend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vend.h; sourceTree = "<group>"; };
+		93E70D8A18FF033300D8734D /* vend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vend.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,8 @@
 		93E70D7F18FEFF2D00D8734D /* Vending Machine Object */ = {
 			isa = PBXGroup;
 			children = (
-				93E70D8018FEFF2D00D8734D /* main.cpp */,
+				93E70D8918FF02A500D8734D /* vend.h */,
+				93E70D8A18FF033300D8734D /* vend.cpp */,
 				93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */,
 			);
 			path = "Vending Machine Object";
@@ -117,7 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93E70D8118FEFF2D00D8734D /* main.cpp in Sources */,
+				93E70D8B18FF033300D8734D /* vend.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +229,7 @@
 				93E70D8818FEFF2D00D8734D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
