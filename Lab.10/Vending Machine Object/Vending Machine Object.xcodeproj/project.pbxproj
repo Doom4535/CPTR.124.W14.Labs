@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9387E71019082BCF00B3A318 /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9387E70F19082BCF00B3A318 /* client.cpp */; };
 		93E70D8318FEFF2D00D8734D /* Vending_Machine_Object.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */; };
 		93E70D8B18FF033300D8734D /* vend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E70D8A18FF033300D8734D /* vend.cpp */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9387E70F19082BCF00B3A318 /* client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = client.cpp; sourceTree = "<group>"; };
 		93E70D7D18FEFF2D00D8734D /* Vending Machine Object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Vending Machine Object"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Vending_Machine_Object.1; sourceTree = "<group>"; };
 		93E70D8918FF02A500D8734D /* vend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vend.h; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				93E70D8918FF02A500D8734D /* vend.h */,
 				93E70D8A18FF033300D8734D /* vend.cpp */,
+				9387E70F19082BCF00B3A318 /* client.cpp */,
 				93E70D8218FEFF2D00D8734D /* Vending_Machine_Object.1 */,
 			);
 			path = "Vending Machine Object";
@@ -120,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E70D8B18FF033300D8734D /* vend.cpp in Sources */,
+				9387E71019082BCF00B3A318 /* client.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
