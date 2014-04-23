@@ -35,9 +35,11 @@ int main() {
             value = sample1.vend();
             v = true;
         }
+        cout << "*******************" << endl;
         if (v == true) {
             cout << "Vending... " << endl << "Change = " << sample1.price() + sample1.vend() << endl;
             v = false;
+            cout << "-----------------" << endl;
         }
     
     }
