@@ -33,8 +33,12 @@ int main() {
             }
             sample1.input(x);
             value = sample1.vend();
+            v = true;
         }
+        if (v == true) {
             cout << "Vending... " << endl << "Change = " << sample1.price() + sample1.vend() << endl;
+            v = false;
+        }
     
     }
     cout << endl << "Total vending machine income: " << sample1.total() << endl;
