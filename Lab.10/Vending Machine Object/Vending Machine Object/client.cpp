@@ -13,7 +13,7 @@ int main() {
     cout << endl << "How much product is there? ";
     cin >> quantity;
     cout << endl;
-    int y = 0;
+    int change = 0;
     bool v = false;
     VendingMachine sample1(price, quantity);
     cout << "Vending Machine ready" << endl
@@ -22,24 +22,29 @@ int main() {
         int n = sample1.quantity();
         while (sample1.quantity() == n) {
             int value = sample1.vend();
-            cout << "Prod Quant:  " << sample1.quantity() << " Total:  " << - value << " Please enter  " << - value << " cents:  ";
-            int x;
-            cin >> x;
+            if (value < 0 )) {
+                cout << "Prod Quant:  " << sample1.quantity() << " Total:  " << sample1.price() << " Please enter  " << - value << " cents:  ";
+                int x;
+                cin >> x;
+                change = value;
+            
             if (x < 0) {
-                cout << "Transaction cancelled, change: " << sample1.price() + sample1.vend() << endl;
+                cout << "Transaction cancelled, change: " << change << endl;
                 sample1.reset();
                 v = false;
                 break;
             }
             sample1.input(x);
-            value = sample1.vend();
+            int y = sample1.vend();
             v = true;
-        }
+            change = value + sample1.price();
+                    }
         cout << "*******************" << endl;
-        if (v == true) {
-            cout << "Vending... " << endl << "Change = " << sample1.price() + sample1.vend() << endl;
+                if (v == true) {
+            cout << "Vending... " << endl << "Change = " << change - sample1.price() << endl;
             v = false;
             cout << "-----------------" << endl;
+            // cout << sample1.reset();
         }
     
     }

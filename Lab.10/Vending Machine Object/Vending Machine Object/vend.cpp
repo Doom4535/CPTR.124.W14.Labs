@@ -15,39 +15,6 @@
 
 using namespace std;
 
-/* 
-    class point {
-    double x = 1;
-    double y;
-};
-
-random() {
-    point p1;
-    cout << p1.x;
-    
-    
-}
-
-int vend_initilyzer() {
-    VendingMachine supply1;
-    int product_price;
-    int product_quantity;
-    int transaction_total;
-    int machine_total;
-    
-public:
-    VendingMachine(price, amount)
-    
-}
- */
-
-/*
-VendingMachine(price, amount) {
-    supply1.product_price = price;
-    supply1.product_quantity = amount;
-};
-*/
-
 VendingMachine::VendingMachine(int price, int quantity) {
     
     product_price = price;
@@ -84,7 +51,7 @@ bool VendingMachine::input(int amount) {
 int VendingMachine::vend() {
     int x;
     if (transaction_total == product_price) {
-        reset();
+        transaction_total = 0;
         product_quantity--;
         machine_total = product_price + machine_total;
         x = 0;
@@ -94,10 +61,10 @@ int VendingMachine::vend() {
         x = transaction_total -  product_price; // return the amount of change needed to purchase the product
     }
     else if (transaction_total > product_price) {
-        reset();
         product_quantity--;
-        machine_total = transaction_total + product_price;
+        machine_total = machine_total + product_price;
         x = transaction_total - product_price;
+        transaction_total = 0;
         
     }
     return x;
