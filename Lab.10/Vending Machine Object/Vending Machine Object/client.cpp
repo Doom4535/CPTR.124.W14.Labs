@@ -15,40 +15,45 @@ int main() {
     cout << endl;
     int change = 0;
     bool v = false;
+    int value = 0; // used to keep track of customer input
     VendingMachine sample1(price, quantity);
-    cout << "Vending Machine ready" << endl
+    cout << "Vending Machine ready, a negative entry resets the machine" << endl
         << "=======================" << endl;
+    //insert code here (deleted because it needs to be redone
     while (sample1.quantity() > 0) {
-        int n = sample1.quantity();
-        while (sample1.quantity() == n) {
-            int value = sample1.vend();
-            if (value < 0 )) {
-                cout << "Prod Quant:  " << sample1.quantity() << " Total:  " << sample1.price() << " Please enter  " << - value << " cents:  ";
-                int x;
-                cin >> x;
-                change = value;
-            
-            if (x < 0) {
-                cout << "Transaction cancelled, change: " << change << endl;
-                sample1.reset();
-                v = false;
-                break;
-            }
-            sample1.input(x);
-            int y = sample1.vend();
-            v = true;
-            change = value + sample1.price();
-                    }
-        cout << "*******************" << endl;
-                if (v == true) {
-            cout << "Vending... " << endl << "Change = " << change - sample1.price() << endl;
-            v = false;
-            cout << "-----------------" << endl;
-            // cout << sample1.reset();
+        cout << "[Product quantity: " << sample1.quantity() << " Total: " << value << "  ] " << " Please enter  " << - sample1.vend() << " cents: ";
+        int user_input = 0;
+        int data = 0;
+        cin >> user_input;
+        if (user_input < 0) { //resets the machine if the user inputs a negative value
+            cout << "Transaction cancelled, change: " << sample1.price() + sample1.vend() << endl;
+            data = 0;
+            value = 0;
+            sample1.reset();
         }
-    
+        else if (user_input >= 0 && sample1.input(user_input) != false) {
+            value = value + user_input;
+            data = sample1.vend();
+            if (data == 0) {
+                data = 0;
+                cout << "Eject product, change = 0" << endl
+                     << "----------------------------" << endl;
+                value = 0;
+                sample1.vend();
+            }
+            else if (data > 0) {
+                cout << "Eject product, change = " << data << endl
+                     << "----------------------------" << endl;
+                value = 0;
+                sample1.vend();
+            }
+            
+        }
     }
-    cout << endl << "Total vending machine income: " << sample1.total() << endl;
-
+    
+    cout << endl << "Total vending machine income: " << sample1.total() << endl
+         << "Thank you for using My Vending Solutions LLC." << endl
+         << "If you are interested in purchasing additional products, you can visit our offices on Mainstreet." << endl
+         << "Should you want to file a complaint, please contact Brigs Vending Company on Mainstreet." << endl;
     
 }
