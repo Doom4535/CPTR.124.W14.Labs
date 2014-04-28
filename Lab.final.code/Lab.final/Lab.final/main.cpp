@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
@@ -27,7 +28,7 @@ void interactive_maximum() {
         vec1.push_back(x);
         }
     
-    if (vec1.size() > 0) {
+    if (vec1.size() > 1) {
         y = vec1[0];
         vec1.pop_back();
         for (int i = 0; i < vec1.size(); i++) {
@@ -46,16 +47,15 @@ void interactive_maximum() {
 
 bool sign_balanced(const vector<int>& v) {
     
-     vector<int> v1;
-     int pos = 0;
-     int neg = 0;
-     for (int e : v1) {
-     if (v1[e] > 0)
-         pos++;
-     
-     else if (v1[e] < 0)
-         neg ++;
+    int pos = 0;
+    int neg = 0;
+    for (int e = 0; e < v.size(); e++) {
+         if (v[e] > 0)
+             pos++;
+         else if (v[e] < 0)
+             neg++;
      }
+    // cout << "Negative: " << neg << " Positive: " << pos << endl; // Debug code
      if (pos == neg)
          return true;
      else
@@ -82,8 +82,14 @@ public:
 
 //  Determines if point pt is inside circle circ
 bool inside(Circle circ, Point pt) {
-    //  Replace the following statement with your code
-    return false;
+    int distance;
+    // compute the distance from the center of the circle to the point
+    distance = sqrt((circ.center.x - pt.x ) * (circ.center.x - pt.x ) + (circ.center.y - pt.y) * (circ.center.y - pt.y));
+    // cout << "Radius: " << circ.radius << " Distance: " << distance << endl; // Debug code
+    if (distance <= circ.radius)
+        return true;
+    else
+        return false;
 }
 
 //----------------------------------------------
@@ -145,7 +151,7 @@ int main() {
     cout << endl << "-------------------------------------" << endl;
     
     //  Exercise sign_balanced function
-    cout << sign_balanced({10, 3, -12, -5, 19, 1}) << endl;
+    cout << sign_balanced({10, 3, -12, -5, 19, -1}) << endl;
     
     cout << "-------------------------------------" << endl;
     
