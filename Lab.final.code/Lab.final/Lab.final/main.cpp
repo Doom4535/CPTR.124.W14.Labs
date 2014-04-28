@@ -82,7 +82,7 @@ public:
 
 //  Determines if point pt is inside circle circ
 bool inside(Circle circ, Point pt) {
-    int distance;
+    double distance;
     // compute the distance from the center of the circle to the point
     distance = sqrt((circ.center.x - pt.x ) * (circ.center.x - pt.x ) + (circ.center.y - pt.y) * (circ.center.y - pt.y));
     // cout << "Radius: " << circ.radius << " Distance: " << distance << endl; // Debug code
@@ -156,7 +156,7 @@ int main() {
     cout << "-------------------------------------" << endl;
     
     //  Exercise inside function
-    cout << inside(make_circle(0.0, 0.0, 5.0), make_point(2.5, 0.5)) << endl;
+    cout << inside(make_circle(0.0, 0.0, 5.0), make_point(0.0, 4.9)) << endl;
     
     cout << "-------------------------------------" << endl;
     
