@@ -59,6 +59,6 @@ int main() {
     cout << endl << "Total vending machine income: " << sample1.total() << endl
          << "Thank you for using My Vending Solutions LLC." << endl
          << "If you are interested in purchasing additional products, you can visit our offices on Mainstreet." << endl
-         << "Should you want to file a complaint, please contact Brigs Vending Company on Mainstreet." << endl;
+         << "Should you want to file a complaint, please contact Brigg's Vending Company on Mainstreet." << endl;
     
 }
